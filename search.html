@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Custom CSS file-->
+    <link rel="stylesheet" href="css/search.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>search</title>
+</head>
+<body>
+
+    <!-- Navbar Style-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html"><i class="fa fa-code fa-lg"> techAchyut</i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link highlight" href="#"></a>
+                </li>
+    
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="get">
+                <a id="game" href="https://achyutghosh.github.io/Frogger-JavaScript-Game/"><i class="fa fa-gamepad"
+                        aria-hidden="true"></i></a>
+                <a id="github" href="search.html"><i class="fab fa-github" aria-hidden="true"></i></a>
+            </form>
+        </div>
+    </nav> <!-- Navbar Style End-->
+
+    
+    <div class="flex-container">
+        <!-- Clock -->
+        <div id="clock">
+            <script type="text/javascript">
+                function showTime() {
+                    var date = new Date();
+                    var h = date.getHours(); // 0 - 23
+                    var m = date.getMinutes(); // 0 - 59
+                    var s = date.getSeconds(); // 0 - 59
+                    var session = 'AM';
+                    var greeting = 'Good Morning!'
+
+
+                    if (h == 0) {
+                        h = 12; // Make the clock 12 hours
+                    }
+
+                    if (h > 12) {
+                        session = 'PM';
+                        greeting = 'Good Evening!';
+                        h = h - 12; // Make the clock 12 hours
+                    }
+
+                    // To make time format like '12:48 PM'
+                    h = (h < 10) ? "0" + h : h;
+                    m = (m < 10) ? "0" + m : m;
+                    s = (s < 10) ? "0" + s : s;
+
+                    var time = h + ":" + m + ":" + s + " " //+ session + " "
+                    var msg = greeting;
+                    
+
+                    // innerText is not work in Firefox and textContent not work in IE
+                    // so we use both ofthem to get proper result irespective of any browser
+                    document.getElementById("clock").innerText = time;
+                    document.getElementById("clock").textContent = time;
+
+                    // Calling the function in every 1000 ms
+                    setTimeout(showTime, 1000);
+                }
+                // Actual function call
+                showTime();
+            </script>
+        </div>
+
+        <!-- Date-->
+        <div id="day">
+            <script>
+                var currentDate = new Date()
+                    day = currentDate.getDate()
+                    month = currentDate.getMonth()
+                    year = currentDate.getFullYear()
+            
+                    monthAlphabet = ['Jan', 'Fab', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    for (let index = 0; index < monthAlphabet.length; index++) {
+                        if (month == index) {
+                            month = monthAlphabet[index];
+                        }  
+                    }
+                document.write(month + ", " + day + ", " + year)
+            </script>
+        </div>
+
+        <div id="msg">
+            <script>
+                function showMsg() {
+                    var date = new Date();
+                    var hour = date.getHours();
+                    var msg = '<Good Night/>';
+
+                    if (hour>=4 && hour<12) {
+                        msg = '<Good Morning/>'
+                    }
+
+                    if (hour >= 12 && hour < 15) {
+                        msg = '<Good Noon/>'
+                    }
+
+                    if (hour >= 15 && hour< 20) {
+                        msg = '<Good Evening/>'
+                    }
+
+                    var greeting = msg;
+
+                    document.getElementById("msg").innerText = greeting;
+                    document.getElementById("msg").textContent = greeting;
+
+                    // Calling the function in every 1000 ms
+                    setTimeout(showTime, 1000);
+                }
+                // Actual function call
+                showMsg();
+            </script>
+        </div>
+    </div>
+
+    <!-- Search Box-->
+    <div >
+        <form action="https://www.google.com/search" method="get" class="field" id="searchform">
+            <input type="text" id="searchterm"  placeholder=" Let's Google!!"  name="q"/>
+            <button type="submit"  id="search"><i class="fab fa-google"></i></button>
+        </form>
+        
+    </div>  
+
+</body>
+<!-- CDN for Bootstrap js & jquery file-->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</html>

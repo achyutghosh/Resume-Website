@@ -1,0 +1,151 @@
+body {
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100vh;
+}
+
+.navbar {
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    opacity: .75;
+}
+
+.container {
+    top: 17%;
+    position: absolute; 
+}
+
+.fontColor {
+    color:#D8E2DC;
+}
+
+.name {
+    font-family: 'Lucida Sans Typewriter';
+}
+
+.describe {
+    font-size: 22px;
+}
+
+/* Icon CSS*/
+.link li {
+    list-style: none;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+.contact {
+    font-family: 'Lucida Sans';
+    list-style: none;
+    line-height: 35px;
+}
+
+.fa-github {
+    color: #D8E2DC;
+}
+
+.fa-github:hover {
+  color: #9cdaf1;
+  text-shadow: 0 0 15px #9cdaf1;
+  transition: all 0.5s ease;
+}
+
+.fa-linkedin {
+    color: #D8E2DC;
+}
+
+.fa-linkedin:hover  {
+    color: #0077b5;
+    text-shadow: 0 0 15px #0077b5;
+    transition: all 0.5s ease;
+}
+
+.fa-facebook {
+    color: #D8E2DC;
+}
+
+.fa-facebook:hover  {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.fa-search {
+    color: #D8E2DC;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translate(2px, -1px) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+}
+
+.fa-gamepad {
+    color: #D8E2DC;
+}
+
+.fa-gamepad :hover {
+    animation: shake 0.8 infinite;
+}
+
+.fa-lg {
+    padding: 10px;
+}
+
+.lang {
+    font-size: 60px;
+}
+
+#google {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#game {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+a:hover {
+    color: #4285F4;
+    text-shadow: 0 0 15px #4285F4;
+    transition: all 0.5s ease;
+}
+
+/* Particle JS CSS*/
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+}
+
+
