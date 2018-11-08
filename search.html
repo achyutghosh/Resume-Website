@@ -136,13 +136,26 @@
     </div>
 
     <!-- Search Box-->
-    <div >
+    <!-- <div >
         <form action="https://www.google.com/search" method="get" class="field" id="searchform">
             <input type="text" id="searchterm"  placeholder=" Let's Google!!"  name="q"/>
             <button type="submit"  id="search"><i class="fab fa-google"></i></button>
         </form>
         
-    </div>  
+    </div>   -->
+
+    <!-- Search Box-->
+    <form class="form" action="https://www.google.com/search" method="get">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search Google or type URL" aria-label=""
+                aria-describedby="basic-addon2" name="q">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit"><i class="fab fa-google"></i></button>
+            </div>
+        </div>
+    </form>
+    
+
 
 </body>
 <!-- CDN for Bootstrap js & jquery file-->
